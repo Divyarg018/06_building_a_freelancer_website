@@ -8,12 +8,15 @@
 }
 html {
     box-sizing: border-box;
+    min-height: 100%;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body {
     font-family: var(--mainFont);
+    min-height: 100%;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 .button {
     background-color: var(--secondary);
@@ -37,6 +40,17 @@ body {
     -moz-box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.45);
     box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.45);
     border-radius: 1rem;
+}
+h2, h3 {
+    text-align: center;
+}
+h3 {
+    color: var(--secondary);
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+p {
+    line-height: 2;
 }
 
 .main-navigation {
@@ -87,9 +101,23 @@ body {
     bottom: 0;
     position: absolute;
 }
-.hero-content {
+.hero-content  {
     color: var(--white);
     position: relative;
     z-index: 1;
     text-align: center;
+}
+.hero-content i {
+    font-size: 3rem;
+    color: var(--primary);
+}
+
+@media (min-width:768px) {
+    .services-container {
+         display: flex;
+         justify-content: space-between;
+    }
+    .service {
+         flex: 0 0 calc(33.3% - 1rem);
+    }
 }
