@@ -27,8 +27,7 @@ body {
 }
 @media (min-width:768px) {
     .main-navigation {
-         flex-direction: row;
-         justify-content: space-between;
+        margin: 0;
     }
 }
 
@@ -37,4 +36,37 @@ body {
     text-decoration: none;
     font-size: 1.4rem;
     margin-bottom: 1.4rem;
+}
+@media (min-width:768px) {
+    .main-navigation a {
+         flex-direction: row;
+         justify-content: space-between;
+    }
+}
+
+.hero {
+    height: 450px;
+    background-image: url(../img/hero.jpg);
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::after {
+    content: '';
+    background-color: rgba(0,0,0, .7);
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+.hero-content {
+    color: var(--white);
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
